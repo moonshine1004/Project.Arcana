@@ -24,6 +24,8 @@ public class ProjectileLauncher : MonoBehaviour
 
     private Dictionary<int, Sprite> _dictionary;
     private Rigidbody2D _rb;
+    public GameObject projectileOwner;
+
     
 
 
@@ -32,6 +34,7 @@ public class ProjectileLauncher : MonoBehaviour
     {
         _camera = Camera.main;
         _dictionary = new Dictionary<int, Sprite>();
+        projectileOwner = this.GameObject();
 
         //ObjectPool 생성자
         //초기 10개 생성
@@ -64,7 +67,7 @@ public class ProjectileLauncher : MonoBehaviour
         //오브젝트 풀에서 투사체를 꺼내옴
         GameObject projectile = pool.Get();
         RenderProjectileSprite(projectile, _usingCardList.hand[_playerController.UsingSkillSlot].CardID);
-
+        _projectile.GetComponent<Damageable>().owner = projectileOwner;
 
 
         //커서 방향 발사를 위한 커서의 위치(스크린 좌표를 뭘드 좌표로 변환)
