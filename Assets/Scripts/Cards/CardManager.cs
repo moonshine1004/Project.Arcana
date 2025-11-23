@@ -13,5 +13,10 @@ public class CardManager : MonoBehaviour
         _images[cardslot].sprite = _sprites[cardID];
         
     }
-    
+
+    void Start()
+    {
+        
+    }
+
 }

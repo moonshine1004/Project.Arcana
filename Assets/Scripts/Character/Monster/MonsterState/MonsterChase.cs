@@ -29,15 +29,19 @@ public class MonsterChase : MonsterStateMachine, MonsterBaseState.IState
 
     public void Update()
     {
-        float distance = Vector3.Distance(_target.transform.position, this.gameObject.transform.position);
-        if (distance < _range) //타겟이 사거리 안에 들어오면
+        if(_target != null)
         {
-            Exit(); //상태변화
+            float distance = Vector3.Distance(_target.transform.position, this.gameObject.transform.position);
+            if (distance < _range) //타겟이 사거리 안에 들어오면
+            {
+                Exit(); //상태변화
+            }
+            else
+            {
+                _monsterMovement.MonsterMoving(_target.transform); //MonsterMovement를 이용하여 몬스터가 타겟에게 이동하도록 설정
+            }
         }
-        else
-        {
-            _monsterMovement.MonsterMoving(_target.transform); //MonsterMovement를 이용하여 몬스터가 타겟에게 이동하도록 설정
-        }
+        
         
     }
 }

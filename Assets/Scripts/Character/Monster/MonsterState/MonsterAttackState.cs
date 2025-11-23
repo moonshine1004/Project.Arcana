@@ -17,11 +17,11 @@ public class MonsterAttackState : MonsterStateMachine, MonsterBaseState.IState
 
     public void Exit()
     {
-        throw new System.NotImplementedException();
+        //
     }
 
     public void Update()
     {
-        throw new System.NotImplementedException();
+        //
     }
 }
