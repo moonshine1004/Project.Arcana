@@ -1,0 +1,13 @@
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/bin/Release/net6.0/linux-x64/CloudCodeTest.deps.json
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/bin/Release/net6.0/linux-x64/CloudCodeTest.dll
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/bin/Release/net6.0/linux-x64/CloudCodeTest.pdb
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.csproj.AssemblyReference.cache
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.AssemblyInfoInputs.cache
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.AssemblyInfo.cs
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.csproj.CoreCompileInputs.cache
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.sourcelink.json
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.dll
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/refint/CloudCodeTest.dll
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.pdb
+/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/ref/CloudCodeTest.dll

@@ -34,7 +34,7 @@ public class MonsterStateMachine : MonoBehaviour
         } 
         currentState = MonsterBaseState.MonsterState.Idle; //시작 상태는 idle
         _state[currentState].Enter(); //시작 상태로 진입
-        Debug.Log("시작상태로 진입");
+        //Debug.Log("시작상태로 진입");
     }
 
     //몬스터의 state가 변할 때 호출되는 메서드

@@ -1,0 +1,13 @@
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/CloudCodeTest.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/CloudCodeTest.deps.json
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/CloudCodeTest.pdb
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Unity.Services.CloudCode.Apis.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Unity.Services.CloudCode.Core.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Google.Protobuf.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Grpc.Core.Api.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Grpc.Net.Client.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Grpc.Net.Common.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/JsonSubTypes.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Microsoft.Extensions.Logging.Abstractions.dll
+/var/folders/nv/c419k41x1zj7y6q_by1ycssw0000gn/T/CloudCodeTest/module-compilation/Newtonsoft.Json.dll

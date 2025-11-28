@@ -25,6 +25,8 @@ public class ProjectileLauncher : MonoBehaviour
     private Dictionary<int, Sprite> _dictionary;
     private Rigidbody2D _rb;
     public GameObject projectileOwner;
+    
+    public float moveY = 2;
 
     
 
@@ -74,7 +76,7 @@ public class ProjectileLauncher : MonoBehaviour
         Vector3 mouseWorldPos = _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mouseWorldPos.z = 0f;
         //투사체 발사가 시작되는 지점을 객체의 위치로 지정
-        Vector3 startPos = transform.position;
+        Vector3 startPos = transform.position + new Vector3(0, moveY, 0);
         //커서 위치와 객체 위치를 노말라이제이션하여 방향 설정
         Vector3 direction = (mouseWorldPos - startPos).normalized;
         

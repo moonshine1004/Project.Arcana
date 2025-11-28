@@ -23,5 +23,10 @@ namespace Unity.Services.CloudCode.GeneratedBindings
                     {"name", name},
                 });
         }
+        
+        public async Task<string> GetHit()
+        {
+            return "맞았습니다";
+        }
     }
 }

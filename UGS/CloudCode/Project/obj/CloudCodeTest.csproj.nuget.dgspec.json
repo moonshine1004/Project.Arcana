@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj": {}
+  },
+  "projects": {
+    "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj",
+        "projectName": "CloudCodeTest",
+        "projectPath": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj",
+        "packagesPath": "/Users/moonshine/.nuget/packages/",
+        "outputPath": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/moonshine/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Com.Unity.Services.CloudCode.Apis": {
+              "target": "Package",
+              "version": "[0.0.9, )"
+            },
+            "Com.Unity.Services.CloudCode.Core": {
+              "target": "Package",
+              "version": "[0.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.36, 6.0.36]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.308/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

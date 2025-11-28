@@ -24,7 +24,7 @@ public class MonsterChase : MonsterStateMachine, MonsterBaseState.IState
     {
         monsterStateMachine.ChangeState(MonsterBaseState.MonsterState.Attack); //상태를 Attack으로 변경
 
-        Debug.Log("어택 상태로 진입");
+        //Debug.Log("어택 상태로 진입");
     }
 
     public void Update()
