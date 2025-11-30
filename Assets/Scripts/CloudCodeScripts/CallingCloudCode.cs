@@ -1,13 +1,14 @@
-using Unity.Services.Authentication;
-using Unity.Services.CloudCode;
+using UnityEngine;
 using Unity.Services.CloudCode.GeneratedBindings;
 using Unity.Services.Core;
-using UnityEngine;
+using Unity.Services.Authentication;
+using Unity.Services.CloudCode;
 
-public class TestModule : MonoBehaviour
+public class CallingCloudCode : MonoBehaviour
 {
     private async void Start()
     {
+
         // Initialize the Unity Services Core SDK
         await UnityServices.InitializeAsync();
 
@@ -21,10 +22,17 @@ public class TestModule : MonoBehaviour
             var result = await module.SayHello("World");
 
             Debug.Log(result);
+
+                        // Call the function within the module and provide the parameters we defined in there
+ 
+            var result２ = await module.GetRandom(6);
+
+            Debug.Log(result２);
         }
         catch (CloudCodeException exception)
         {
             Debug.LogException(exception);
+
         }
     }
 }

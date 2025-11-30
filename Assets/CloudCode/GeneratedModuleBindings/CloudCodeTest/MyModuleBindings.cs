@@ -23,10 +23,16 @@ namespace Unity.Services.CloudCode.GeneratedBindings
                     {"name", name},
                 });
         }
-        
-        public async Task<string> GetHit()
+
+        public async Task<int> GetRandom(int max)
         {
-            return "맞았습니다";
+            return await k_Service.CallModuleEndpointAsync<int>(
+                "CloudCodeTest",
+                "GetRandom",
+                new Dictionary<string, object>()
+                {
+                    {"max", max},
+                });
         }
     }
 }

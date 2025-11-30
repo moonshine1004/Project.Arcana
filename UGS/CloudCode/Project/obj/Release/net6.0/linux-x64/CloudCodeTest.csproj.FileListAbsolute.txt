@@ -11,3 +11,16 @@
 /Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/refint/CloudCodeTest.dll
 /Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/CloudCodeTest.pdb
 /Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/Release/net6.0/linux-x64/ref/CloudCodeTest.dll
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\bin\Release\net6.0\linux-x64\CloudCodeTest.deps.json
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\bin\Release\net6.0\linux-x64\CloudCodeTest.dll
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\bin\Release\net6.0\linux-x64\CloudCodeTest.pdb
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.AssemblyInfo.cs
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.sourcelink.json
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.dll
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\refint\CloudCodeTest.dll
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCodeTest.pdb
+C:\Users\User\Desktop\SundayClass\Project.Arcana\UGS\CloudCode\Project\obj\Release\net6.0\linux-x64\ref\CloudCodeTest.dll
