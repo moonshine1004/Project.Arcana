@@ -34,5 +34,15 @@ namespace Unity.Services.CloudCode.GeneratedBindings
                     {"max", max},
                 });
         }
+
+        public async Task<string> Test()
+        {
+            return await k_Service.CallModuleEndpointAsync<string>(
+                "CloudCodeTest",
+                "Test",
+                new Dictionary<string, object>()
+                {
+                });
+        }
     }
 }

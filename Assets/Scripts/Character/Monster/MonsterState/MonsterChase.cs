@@ -4,9 +4,9 @@ public class MonsterChase : MonsterStateMachine, MonsterBaseState.IState
 {
     //몬스터의 chase 상태를 정의한 클래스입니다.
     #region 필드 변수
-    [SerializeField] private int _range = 100;  //몬스터의 적 감지 범위
+    [SerializeField] private int _range = 10;  //몬스터의 적 감지 범위
     private Vector3 _targetPosition; //몬스터가 쫓을 오브젝트
-    private GameObject _target; //몬스터가 쫓을 오브젝트
+    [SerializeField] private GameObject _target; //몬스터가 쫓을 오브젝트
     private MonsterMovement _monsterMovement; //몬스터의 움직임 오브젝트 복사
     #endregion
     public MonsterBaseState.MonsterState StateType => MonsterBaseState.MonsterState.Chase;
@@ -24,7 +24,7 @@ public class MonsterChase : MonsterStateMachine, MonsterBaseState.IState
     {
         monsterStateMachine.ChangeState(MonsterBaseState.MonsterState.Attack); //상태를 Attack으로 변경
 
-        //Debug.Log("어택 상태로 진입");
+        Debug.Log("어택 상태로 진입");
     }
 
     public void Update()

@@ -5,7 +5,7 @@ public static class PlayerAnimatorCore
     public static string isMoving = "isMoving";
     public static string isAlive = "isAlive";
     public static string OnSkillInput = "OnSkillInput";
-    public static int SkillIndex = 0;
+    public static string SkillIndex = "SkillIndex";
 
 
     public static string InputQ = "InputQ";

@@ -43,7 +43,12 @@ public class MonsterPooling : MonoBehaviour
         var stat = monster.GetComponent<CharacterStat>();
         stat.StatReset();
     }
+    
     //풀의 크기를 초과하였을 때 몬스터를 삭제
+    /// <summary>
+    /// 몬스터를 없앨때 사용하는 메서드
+    /// </summary>
+    /// <param name="monster"></param>
     private void OnDestroyMonster(GameObject monster)
     {
         Destroy(monster);

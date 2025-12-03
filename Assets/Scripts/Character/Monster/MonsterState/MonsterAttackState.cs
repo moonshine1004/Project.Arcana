@@ -12,7 +12,8 @@ public class MonsterAttackState : MonsterStateMachine, MonsterBaseState.IState
     
     public void Enter()
     {
-        _target = monsterContext.Target;
+        monsterStateMachine = GetComponent<MonsterStateMachine>();
+        _target = monsterStateMachine.monsterContext.Target;
     }
 
     public void Exit()

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj": {}
+    "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/Project.csproj": {}
   },
   "projects": {
-    "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj": {
+    "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj",
-        "projectName": "CloudCodeTest",
-        "projectPath": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/CloudCodeTest.csproj",
+        "projectUniqueName": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/Project.csproj",
+        "projectName": "Project",
+        "projectPath": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/Project.csproj",
         "packagesPath": "/Users/moonshine/.nuget/packages/",
         "outputPath": "/Users/moonshine/Desktop/MyProjects/MyProject/UGS/CloudCode/Project/obj/",
         "projectStyle": "PackageReference",
@@ -84,11 +84,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.308/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }
