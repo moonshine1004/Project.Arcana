@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudCodeTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe233fadd2eaf019fb6988d7ec7ccec56fccf191")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a94facf13d60d44c7a58d5e8565ee820d2e1093")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudCodeTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudCodeTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

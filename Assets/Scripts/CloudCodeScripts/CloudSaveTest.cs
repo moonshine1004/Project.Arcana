@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
@@ -9,18 +10,43 @@ public class CloudSaveTest : MonoBehaviour, GameManager.IGameManger
 {
     async void Start()
     {
-        
+
     }
 
     [ContextMenu("SaveData")]
     public async void SaveData()
     {
-        var playerData = new Dictionary<string, object>{
-          {"firstKeyName", "a text value"},
-          {"secondKeyName", 123}
-        };
+        var li = new List<item>();
+        li.Add(new item
+        {
+            Lev = 1,
+            id = 1,
+        });
+        li.Add(new item
+        {
+            Lev = 2,
+            id = 2,
+        }); 
+        li.Add(new item
+        {
+            Lev = 3,
+            id = 3,
+        });
+        
+        var playerData = new Dictionary<string, object>();
+        for(int i = 0; i < li.Count; i++)
+        {
+            playerData.Add($"{li[i].id}", JsonUtility.ToJson(li[i]));
+        }
+
         await CloudSaveService.Instance.Data.Player.SaveAsync(playerData);
         Debug.Log($"Saved data {string.Join(',', playerData)}");
+    }
+    [Serializable]
+    public class item
+    {
+        public int Lev;
+        public int id;
     }
 
     [ContextMenu("LoatData")]
@@ -30,11 +56,13 @@ public class CloudSaveTest : MonoBehaviour, GameManager.IGameManger
           "firstKeyName", "secondKeyName"
         });
 
-        if (playerData.TryGetValue("firstKeyName", out var firstKey)) {
+        if (playerData.TryGetValue("firstKeyName", out var firstKey))
+        {
             Debug.Log($"firstKeyName value: {firstKey.Value.GetAs<string>()}");
         }
 
-        if (playerData.TryGetValue("secondKeyName", out var secondKey)) {
+        if (playerData.TryGetValue("secondKeyName", out var secondKey))
+        {
             Debug.Log($"secondKey value: {secondKey.Value.GetAs<int>()}");
         }
     }
