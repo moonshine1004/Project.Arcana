@@ -77,7 +77,7 @@ public class UsingCardList : MonoBehaviour
 
     public int GetDamage(int NowSkillIndex)
     {
-        int damage = (int)hand[NowSkillIndex]._Damage;
+        int damage = (int)hand[NowSkillIndex].damage;
         return damage;
     }
 

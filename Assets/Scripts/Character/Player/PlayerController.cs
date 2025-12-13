@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
             if (System.Enum.TryParse(name, out Enum.SkillKey keyEnum))//이름을 enum값에 따라 숫자로 변환
             {
                 UsingSkillSlot = (int)keyEnum;
-                _animator.SetInteger(PlayerAnimatorCore.SkillIndex, _usingCardList.hand[UsingSkillSlot].CardID); //애니메이터 인티저를 카드덱의 카드 아이디로 초기화
+                _animator.SetInteger(PlayerAnimatorCore.SkillIndex, _usingCardList.hand[UsingSkillSlot].cardID); //애니메이터 인티저를 카드덱의 카드 아이디로 초기화
                 _usingCardList.UseCard(UsingSkillSlot); //현재 스킬 인덱스에 해당하는 카드 사용
                 _cardUIRenderer.cardAnimation((int)keyEnum); //입력 받은 키에 해당하는 칸의 카드 사용 애니메이션 재생
 

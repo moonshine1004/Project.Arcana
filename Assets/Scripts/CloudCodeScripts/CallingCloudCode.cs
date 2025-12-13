@@ -10,15 +10,15 @@ public class CallingCloudCode : Singleton<CallingCloudCode>, GameManager.IGameMa
 {
     private async void Start()
     {   
-
+        
         
     }
-
+    //async: 
     public async Task CloudeCodeAuthentication()
     {
-        // Initialize the Unity Services Core SDK
+        //
         await UnityServices.InitializeAsync();
-        // Authenticate by logging into an anonymous account
+        //
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
 
     }

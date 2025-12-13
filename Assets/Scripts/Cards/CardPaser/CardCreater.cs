@@ -23,7 +23,7 @@ public class CardCreater : MonoBehaviour
         //cards리스트에 있는 모든 요소들을 하나씩 꺼내어 스크립터블 오브젝트 에셋으로 저장
         foreach (var card in cards)
         {
-            AssetDatabase.CreateAsset(card, $"{outputFolder}/Card_{card.CardID}.asset");
+            AssetDatabase.CreateAsset(card, $"{outputFolder}/Card_{card.cardID}.asset");
         }
         //이상의 내용을 에디터에 저장
         AssetDatabase.SaveAssets();

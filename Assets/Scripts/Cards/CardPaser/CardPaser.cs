@@ -47,24 +47,24 @@ public static class CardParser
                     {
                         case "CardID":
                             if (int.TryParse(value, out var id)) //value문자열을 int로 변환 시도 성공 시 id에 대입됨, 실패 시 false반환
-                                card.CardID = id;
+                                card.cardID = id;
                             break;
                         case "Cost":
                             if (int.TryParse(value, out var cost))
-                                card._Cost = cost;
+                                card.cost = cost;
                             break;
                         case "Damage":
                             if (float.TryParse(value, out var dmg))
-                                card._Damage = dmg;
+                                card.damage = dmg;
                             break;
                         case "Element":
                             if (int.TryParse(value, out var elem))
-                                card._element = (Enum.Element)elem;
+                                card.element = (Enum.Element)elem;
                             break;
                         
                         case "TargetType":
                             if (int.TryParse(value, out var target))
-                                card._TargetType = (Enum.TargetType)target;
+                                card.targetType = (Enum.TargetType)target;
                             break;
                         
                     }

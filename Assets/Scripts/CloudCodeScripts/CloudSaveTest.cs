@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.CloudSave;
 using Unity.Services.Core;
+using UnityEditor;
 using UnityEngine;
 
 public class CloudSaveTest : MonoBehaviour, GameManager.IGameManger
@@ -16,55 +17,55 @@ public class CloudSaveTest : MonoBehaviour, GameManager.IGameManger
     [ContextMenu("SaveData")]
     public async void SaveData()
     {
-        var li = new List<item>();
-        li.Add(new item
+        var itemDataList = new List<ItemData>();
+        var guids = AssetDatabase.FindAssets("t:ItemData", new[] { "Assets/Items" });
+        foreach(var guid in guids)
         {
-            Lev = 1,
-            id = 1,
-        });
-        li.Add(new item
-        {
-            Lev = 2,
-            id = 2,
-        }); 
-        li.Add(new item
-        {
-            Lev = 3,
-            id = 3,
-        });
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            itemDataList.Add(AssetDatabase.LoadAssetAtPath<ItemData>(path));
+        }
         
-        var playerData = new Dictionary<string, object>();
-        for(int i = 0; i < li.Count; i++)
+        var itemDataDiction = new Dictionary<string, object>();
+        for(int i = 0; i < itemDataList.Count; i++)
         {
-            playerData.Add($"{li[i].id}", JsonUtility.ToJson(li[i]));
+            itemDataDiction.Add($"{itemDataList[i].id}", JsonUtility.ToJson(itemDataList[i]));
         }
 
-        await CloudSaveService.Instance.Data.Player.SaveAsync(playerData);
-        Debug.Log($"Saved data {string.Join(',', playerData)}");
-    }
-    [Serializable]
-    public class item
-    {
-        public int Lev;
-        public int id;
+        //SaveAsync 메서드: 딕셔너리의 키와 값을 서버에 저장
+        await CloudSaveService.Instance.Data.Player.SaveAsync(itemDataDiction);
+        
+        Debug.Log($"Saved data {string.Join(',', itemDataDiction)}");
     }
 
+    /// <summary>
+    /// 데이터 로드
+    /// </summary>
     [ContextMenu("LoatData")]
     public async void LoadData()
     {
-        var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> {
-          "firstKeyName", "secondKeyName"
-        });
-
-        if (playerData.TryGetValue("firstKeyName", out var firstKey))
+        for(int i = 0; i<10; i++)
         {
-            Debug.Log($"firstKeyName value: {firstKey.Value.GetAs<string>()}");
+            var itemData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> {{i.ToString()}});
+            itemData.TryGetValue($"{i}", out var item);
+            Debug.Log($"{i} value: {item.Value.GetAs<string>()}");
         }
+        
+        
+        
+        
+        // var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> {
+        //   "firstKeyName", "secondKeyName"
+        // });
 
-        if (playerData.TryGetValue("secondKeyName", out var secondKey))
-        {
-            Debug.Log($"secondKey value: {secondKey.Value.GetAs<int>()}");
-        }
+        // if (playerData.TryGetValue("firstKeyName", out var firstKey))
+        // {
+        //     Debug.Log($"firstKeyName value: {firstKey.Value.GetAs<string>()}");
+        // }
+
+        // if (playerData.TryGetValue("secondKeyName", out var secondKey))
+        // {
+        //     Debug.Log($"secondKey value: {secondKey.Value.GetAs<int>()}");
+        // }
     }
 
     public void IOnStart()

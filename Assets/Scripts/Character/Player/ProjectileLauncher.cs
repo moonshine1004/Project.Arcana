@@ -68,7 +68,7 @@ public class ProjectileLauncher : MonoBehaviour
     {
         //오브젝트 풀에서 투사체를 꺼내옴
         GameObject projectile = pool.Get();
-        RenderProjectileSprite(projectile, _usingCardList.hand[_playerController.UsingSkillSlot].CardID);
+        RenderProjectileSprite(projectile, _usingCardList.hand[_playerController.UsingSkillSlot].cardID);
         _projectile.GetComponent<Damageable>().owner = projectileOwner;
 
 

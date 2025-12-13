@@ -11,10 +11,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 130c3fa3b21dc0841831a223b8f33b4b, type: 3}
   m_Name: Card_24
-  m_EditorClassIdentifier: 
-  CardID: 24
-  _Cost: 4
-  _Damage: 35
-  _element: 5
-  _RangeType: 0
-  _TargetType: 2
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardID: 24
+  cost: 4
+  damage: 35
+  element: 5
+  rangeType: 0
+  targetType: 2

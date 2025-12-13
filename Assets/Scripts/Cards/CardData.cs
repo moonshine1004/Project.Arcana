@@ -6,12 +6,12 @@ using UnityEngine;
 public class CardData : ScriptableObject
 {
     //카드 스크립터블 오브젝트 클래스 입니다
-    public int CardID;
-    public int _Cost;
-    public float _Damage;
-    public Enum.Element _element;
-    public Enum.RangeType _RangeType;
-    public Enum.TargetType _TargetType;
+    public int cardID;
+    public int cost;
+    public float damage;
+    public Enum.Element element;
+    public Enum.RangeType rangeType;
+    public Enum.TargetType targetType;
 
 
 

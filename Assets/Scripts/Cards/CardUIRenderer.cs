@@ -25,11 +25,11 @@ public class CardUIRenderer : MonoBehaviour
             _cardViewPrefab[i].Initialize(_usingCardList.hand[i]);
         }
 
-        _cardManager.ImageRenderer(0, _usingCardList.hand[0].CardID);
-        _cardManager.ImageRenderer(1, _usingCardList.hand[1].CardID);
-        _cardManager.ImageRenderer(2, _usingCardList.hand[2].CardID);
-        _cardManager.ImageRenderer(3, _usingCardList.hand[3].CardID);
-        _cardManager.ImageRenderer(4, _usingCardList.hand[4].CardID);
+        _cardManager.ImageRenderer(0, _usingCardList.hand[0].cardID);
+        _cardManager.ImageRenderer(1, _usingCardList.hand[1].cardID);
+        _cardManager.ImageRenderer(2, _usingCardList.hand[2].cardID);
+        _cardManager.ImageRenderer(3, _usingCardList.hand[3].cardID);
+        _cardManager.ImageRenderer(4, _usingCardList.hand[4].cardID);
     }
     public void cardAnimation(int i)
     {
