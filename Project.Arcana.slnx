@@ -76,6 +76,7 @@
   <Project Path="Unity.TextMeshPro.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
   <Project Path="Unity.AI.Animate.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.2D.Animation.Editor.csproj" />
   <Project Path="Unity.2D.Common.Path.Editor.csproj" />
   <Project Path="Unity.Services.Core.Editor.csproj" />
@@ -83,7 +84,6 @@
   <Project Path="Unity.AppUI.MVVM.csproj" />
   <Project Path="FangAutoTile.Editor.csproj" />
   <Project Path="UnityEditor.UI.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.Multiplayer.Center.Common.csproj" />
   <Project Path="Unity.2D.Tilemap.Extras.Editor.csproj" />
   <Project Path="Unity.Services.Deployment.csproj" />

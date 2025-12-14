@@ -1,9 +1,9 @@
 using UnityEngine;
 
 /// <summary>
-/// 싱글턴 오브젝트를 생성하기 위한 서브 클래스입니다.
+/// 싱글턴 오브젝트를 생성하기 위한 서브 클래스입니다. 펄시스턴트 싱글턴
 /// </summary>
-/// <typeparam name="T"></typeparam>
+/// <typeparam name="T">파라메터는 싱글턴으로 선언될 클래스</typeparam>
 public class Singleton<T>: MonoBehaviour where T : MonoBehaviour
 {
     //정적 인스턴스 선언
@@ -20,7 +20,7 @@ public class Singleton<T>: MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            //오브젝트가 있으면 지나가고 없으면 생성
+        //오브젝트가 있으면 지나가고 없으면 생성
         if(_instance == null)
         {
             //기존에 존재하는 인스턴스 찾기
@@ -33,7 +33,7 @@ public class Singleton<T>: MonoBehaviour where T : MonoBehaviour
                 _instance = newGameobject.AddComponent<T>();
             }
         }
-
+        
         return _instance;
         }
     }

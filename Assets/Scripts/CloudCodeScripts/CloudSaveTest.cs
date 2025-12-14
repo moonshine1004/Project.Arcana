@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class CloudSaveTest : MonoBehaviour, GameManager.IGameManger
 {
+    public ItemData[] itemDatas = new ItemData[10];
+    
     async void Start()
     {
 
@@ -48,24 +50,14 @@ public class CloudSaveTest : MonoBehaviour, GameManager.IGameManger
             var itemData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> {{i.ToString()}});
             itemData.TryGetValue($"{i}", out var item);
             Debug.Log($"{i} value: {item.Value.GetAs<string>()}");
+
+            var jsonFile = item.Value.GetAs<string>();
+            var scriptableObj = ScriptableObject.CreateInstance<ItemData>();
+            JsonUtility.FromJsonOverwrite(jsonFile, scriptableObj);
+            itemDatas[i] = scriptableObj;
         }
-        
-        
-        
-        
-        // var playerData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> {
-        //   "firstKeyName", "secondKeyName"
-        // });
 
-        // if (playerData.TryGetValue("firstKeyName", out var firstKey))
-        // {
-        //     Debug.Log($"firstKeyName value: {firstKey.Value.GetAs<string>()}");
-        // }
-
-        // if (playerData.TryGetValue("secondKeyName", out var secondKey))
-        // {
-        //     Debug.Log($"secondKey value: {secondKey.Value.GetAs<int>()}");
-        // }
+                
     }
 
     public void IOnStart()
@@ -76,5 +68,10 @@ public class CloudSaveTest : MonoBehaviour, GameManager.IGameManger
     public Task IOnStartAsync()
     {
         throw new System.NotImplementedException();
+    }
+
+    public Task IOnUpdateAsync()
+    {
+        throw new NotImplementedException();
     }
 }

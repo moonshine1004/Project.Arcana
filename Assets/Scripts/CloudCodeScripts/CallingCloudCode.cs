@@ -51,4 +51,9 @@ public class CallingCloudCode : Singleton<CallingCloudCode>, GameManager.IGameMa
         await CloudeCodeAuthentication();
         UseUGS();
     }
+
+    public Task IOnUpdateAsync()
+    {
+        throw new System.NotImplementedException(); 
+    }
 }

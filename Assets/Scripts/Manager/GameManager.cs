@@ -5,11 +5,14 @@ using Unity.Services.Core;
 using Unity.Services.CloudSave;
 using Unity.VisualScripting;
 using System.Threading.Tasks;
+using TMPro;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField]
-    private CallingCloudCode _callingCloudCode;
+    [SerializeField] private CallingCloudCode _callingCloudCode;
+    [SerializeField] private CardRenderManager _cardRenderManager;
+
+    public static bool LogIn = false;
 
     /// <summary>
     /// 게임 매니저의 Start(), Update() 등에 들어갈 게임 매니저 인터페이스를 상속 받는 클래스의 IOnStart(), IOnUpdate()를 정의
@@ -18,20 +21,33 @@ public class GameManager : Singleton<GameManager>
     {
         public void IOnStart();
         public Task IOnStartAsync(); 
+        public Task IOnUpdateAsync();
     }
 
 
 
     async void Start()
     {
-        await _callingCloudCode.IOnStartAsync();
-        _callingCloudCode.IOnStart();
+        
         
     }
 
     async void Awake()
     {
-        
+        await _callingCloudCode.IOnStartAsync();
+        _callingCloudCode.IOnStart();
+        Debug.Log("로그인 끝");
+
+    }
+
+    private void Update()
+    {
+        if (LogIn==true)
+        {
+            Debug.Log("카드 렌더링 시작");
+            _cardRenderManager.TestCardRender();
+            
+        }
     }
     
 

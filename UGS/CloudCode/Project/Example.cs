@@ -27,6 +27,12 @@ public class MyModule
     {
         return "이것은 테스트 입니다";
     }
+
+    [CloudCodeFunction("SaveDeck")]
+    public void SaveDeck()
+    {
+        
+    }
 }
 
 

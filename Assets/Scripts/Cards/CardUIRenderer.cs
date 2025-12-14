@@ -15,6 +15,11 @@ public class CardUIRenderer : MonoBehaviour
     
     private void Update()
     {
+        
+    }
+
+    public void CardRender()
+    {
         _cardViewPrefab[0].Initialize(_usingCardList.hand[0]);
         _cardViewPrefab[1].Initialize(_usingCardList.hand[1]);
         _cardViewPrefab[2].Initialize(_usingCardList.hand[2]);
@@ -31,6 +36,7 @@ public class CardUIRenderer : MonoBehaviour
         _cardManager.ImageRenderer(3, _usingCardList.hand[3].cardID);
         _cardManager.ImageRenderer(4, _usingCardList.hand[4].cardID);
     }
+
     public void cardAnimation(int i)
     {
         StartCoroutine(MoveCardUpAndDown(_cardViewPrefab[i].transform, 100f, 0.2f));
