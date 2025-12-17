@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class UsingCardList : MonoBehaviour
@@ -11,10 +12,17 @@ public class UsingCardList : MonoBehaviour
     private const int initialHandSize = 5; //드로우 카드 수
     [SerializeField] private Deck _deck; //카드 덱 위임
 
-    
-    public void Init(Deck deck)
+    #region 프로퍼티
+    public Deck Deck
     {
-        List<CardData> shuffled = new List<CardData>(deck.cardDeck); //카드 덱 위임
+        get => _deck;
+    }
+    #endregion
+
+    
+    public async Task Init(Deck deck)
+    {
+        List<CardData> shuffled = new List<CardData>(deck.CardDeck); //카드 덱 위임
         //카드 덱을 셔플
         Shuffle(shuffled);
         //드로우 전 카드를 드로우 카드 수 만큼 hand로 이동

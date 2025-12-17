@@ -14,7 +14,7 @@ public class CardView : MonoBehaviour
     private CardData _cardData;
 
 
-    public void Initialize(CardData card)
+    public async void Initialize(CardData card)
     {
         _cardData = card;
         _costText.text = card.cost.ToString();

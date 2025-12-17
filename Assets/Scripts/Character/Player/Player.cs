@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _UsingCardList.Init(_UsingCardList.GetComponent<Deck>());
+
 
 
 
@@ -37,7 +37,6 @@ public class Player : MonoBehaviour
             //_currentCard = _cardPooling.GetCardView(_cardData[_playerController.NowSkillIndex]);
         }
     }
-
 
     
 }

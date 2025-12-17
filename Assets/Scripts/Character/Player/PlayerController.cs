@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     //이동 상태
     bool isMoving = false;
     //스킬 인덱스
-    public int UsingSkillSlot=0;
+    public int UsingSkillSlot = 0;
     [SerializeField] private UsingCardList _usingCardList;
     [SerializeField] private CardUIRenderer _cardUIRenderer;
     [SerializeField] private ProjectileLauncher _projectileLauncher;
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
     //공격 트리거를 온, 각 공격에 해당하는 키를 온
     public void OnSkillInput(InputAction.CallbackContext callback)
     {
-        if (callback.started)
+        if (callback.performed)
         {
             _animator.SetBool(PlayerAnimatorCore.OnSkillInput, true);
             var name = callback.control.name; //인풋 액션의 컨트롤 이름을 가져옴
@@ -110,6 +110,8 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    
     
 
 }

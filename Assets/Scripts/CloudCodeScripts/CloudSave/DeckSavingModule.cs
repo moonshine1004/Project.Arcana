@@ -6,10 +6,16 @@ using UnityEngine;
 /// <summary>
 /// 카드 덱을 서버에 저장하고 불러오는 스크립트입니다.
 /// </summary>
-public class SaveDeck : MonoBehaviour
+public class DeckSavingModule : MonoBehaviour
 {
     //저장할 덱 구성
     [SerializeField] private List<CardData> _cardDeck;
+    [SerializeField] private Deck _deck;
+
+    public Deck Deck
+    {
+        get => _deck;
+    }
 
     [ContextMenu("SaveData")]
     public async void SaveData()
