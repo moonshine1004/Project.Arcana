@@ -8,6 +8,7 @@ public class PopUpContentPresenter : MonoBehaviour
     public void Start()
     {
         initalizeCard();
+        
     }
 
 
