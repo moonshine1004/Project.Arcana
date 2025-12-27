@@ -54,12 +54,10 @@
     <Compile Include="Assets/Scripts/Core/Enum/Enum.cs" />
     <Compile Include="Assets/Scripts/Cards/CardPaser/CardCreater.cs" />
     <Compile Include="Assets/Scripts/CloudCodeScripts/CloudSaveTest.cs" />
-    <Compile Include="Assets/Scripts/UI/PopUp/CardDiction/PopUpContentPresenter.cs" />
     <Compile Include="Assets/Scripts/Manager/GameManager.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterState/MonsterChase.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterState/MonsterIdle.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterContext.cs" />
-    <Compile Include="Assets/Scripts/UI/PopUp/PopUpModel.cs" />
     <Compile Include="Assets/Scripts/Character/Player/DamageableForProjectile.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterPooling.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Scripts/PlayerMovement.cs" />
@@ -68,13 +66,13 @@
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Resources/Prefabs_with_behavior/chest_open_on_contact/Scripts/ChestAnimationOnContact.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Resources/Prefabs_with_behavior/block_push_on_contact/Scripts/BlockPushOnContact.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Resources/Prefabs_with_behavior/tall_grass_react_on_contact/Scripts/TallGrassAnimationOnContact.cs" />
-    <Compile Include="Assets/Scripts/UI/PopUp/PopUpView.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Ruccho/FangAutoTile/Sample/OnMapPlayerController.cs" />
     <Compile Include="Assets/Scripts/Cards/CardManager.cs" />
     <Compile Include="Assets/Samples/Authentication/3.5.1/UI Example/UnityPlayerAccountsUIExample.cs" />
     <Compile Include="Assets/Scripts/Core/ProjectileLifetime.cs" />
     <Compile Include="Assets/Scripts/Core/UsingCardList.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterState/MonsterAttackState.cs" />
+    <Compile Include="Assets/Scripts/Character/Monster/Monster.cs" />
     <Compile Include="Assets/Scripts/Character/Player/PlayerController.cs" />
     <Compile Include="Assets/Scripts/Item/ItemData.cs" />
     <Compile Include="Assets/Scripts/UI/PopUp/PopUpController.cs" />
@@ -89,7 +87,6 @@
     <Compile Include="Assets/Scripts/Cards/CardPaser/CardPaser.cs" />
     <Compile Include="Assets/Scripts/Cards/CardUIRenderer.cs" />
     <Compile Include="Assets/Samples/Authentication/3.5.1/UI Example/FacebookLoginUIExample.cs" />
-    <Compile Include="Assets/Scripts/UI/PopUp/CardDiction/PopUpContentView.cs" />
     <Compile Include="Assets/Samples/Authentication/3.5.1/UI Example/AnonymousSignInUIExample.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterStateMachine.cs" />
     <Compile Include="Assets/Scripts/Core/PlayerAnimatorCore.cs" />
@@ -99,6 +96,7 @@
     <Compile Include="Assets/Scripts/CloudCodeScripts/CallingCloudCode.cs" />
     <Compile Include="Assets/Scripts/CloudCodeScripts/CloudSave/DeckSavingModule.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterBaseState.cs" />
+    <Compile Include="Assets/Scripts/UI/PopUp/PopUpContentView.cs" />
     <Compile Include="Assets/Scripts/Path Finding/NavigationTile.cs" />
     <Compile Include="Assets/Scripts/Character/Monster/MonsterMovement.cs" />
     <Compile Include="Assets/Scripts/UI/UIView.cs" />
@@ -107,7 +105,6 @@
     <Compile Include="Assets/Scripts/Item/ItemCreator.cs" />
     <Compile Include="Assets/Scripts/Manager/CardRenderManager.cs" />
     <Compile Include="Assets/Scripts/Character/Player/Player.cs" />
-    <Compile Include="Assets/Scripts/UI/PopUp/CardDiction/PopUpContentModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

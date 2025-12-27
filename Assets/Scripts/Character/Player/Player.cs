@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR;
-// ReSharper disable All
 
+/// <summary>
+/// player 동작의 전반을 다루는 클래스
+/// </summary>
+[RequireComponent(typeof(PlayerController))]
 public class Player : MonoBehaviour
 {
-    //player 동작의 전반을 다루는 스크립트 입니다.
     [SerializeField] private UsingCardList _UsingCardList;
     [SerializeField] private CardPooling _cardPooling; //카드 풀 위임
     [SerializeField] private List<CardData> _cardData; //카드 데이터(스크립터블 오브젝트) 리스트
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
             //_currentCard = _cardPooling.GetCardView(_cardData[_playerController.NowSkillIndex]);
         }
     }
+   
 
     
 }

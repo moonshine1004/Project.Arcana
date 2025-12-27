@@ -2,24 +2,35 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PopUpController : MonoBehaviour
-{
-    [SerializeField] private PopUpView _popUpView;  //팝업 view 참조로 연결
-    private PopUpModel _popUpModel = new PopUpModel();  //모델은 객체를 생성->어차피 로직만 가져다 쓸거니까
+{    
+    [SerializeField] private GameObject _popUpView;
+    private bool isPopUp = false;
 
-    public void Start()
+    //팝업 '상태 전환' 메서드
+    public void Toggle()
     {
-        _popUpView = gameObject.GetComponent<PopUpView>();
+        isPopUp = !isPopUp;
     }
+
 
     public void PopUpKeyInput(InputAction.CallbackContext callback)
     {
         if (callback.performed)
         {
-            _popUpModel.Toggle();
-            if(_popUpModel.IsPopUp)
-                _popUpView.Show();
+            Toggle();
+            if(isPopUp)
+                Show();
             else
-                _popUpView.Hide();
+                Hide();
         }
+    }
+
+    public void Show()
+    {
+        _popUpView.SetActive(true);
+    }
+    public void Hide()
+    {
+        _popUpView.SetActive(false);
     }
 }

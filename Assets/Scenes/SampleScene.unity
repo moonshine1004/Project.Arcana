@@ -647,6 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpContentPresenter
   _popUpContentView: {fileID: 374063790}
+  _popUpContentModel: {fileID: 0}
 --- !u!114 &374063790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +797,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466908739}
-  - component: {fileID: 466908742}
   - component: {fileID: 466908741}
   m_Layer: 5
   m_Name: PopUps
@@ -833,20 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8186f684f2ba4eb8bff6803969dd176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpController
-  _popUpView: {fileID: 466908742}
---- !u!114 &466908742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466908738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff82be8ecded4a67ac3f6d8f6383d27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PopUpView
-  _popUpUI: {fileID: 55336363}
+  _popUpView: {fileID: 466908738}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7070,6 +7057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpContentPresenter
   _popUpContentView: {fileID: 1278994797}
+  _popUpContentModel: {fileID: 0}
 --- !u!114 &1278994797
 MonoBehaviour:
   m_ObjectHideFlags: 0

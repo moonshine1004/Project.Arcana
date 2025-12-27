@@ -5,6 +5,17 @@ public class PopUpContentView : MonoBehaviour
     [SerializeField] private Transform _content;
     [SerializeField] private CardView _cardView;
 
+    private int _deckCount = 12;
+
+    public void Start()
+    {
+        initalizeCard();
+        
+    }
+    public void initalizeCard()
+    {
+        Populate(_deckCount);
+    }
 
     /// <summary>
     /// UI에 count만큼 카드를 생성

@@ -2,11 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// 조작기기를 이용한 플레이어 조작에 관한 메서드
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
-    //조작기기를 이용하여 플레이어를 컨트롤하는 것에 대한 클래스입니다.
-    
-    //컴포넌트
+
     private Rigidbody2D _rb;
     private Animator _animator;
     //변수
