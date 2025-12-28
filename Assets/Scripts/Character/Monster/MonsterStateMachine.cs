@@ -5,10 +5,10 @@ using System.Linq;
 
 public class MonsterStateMachine : MonoBehaviour
 {
-    #region 변수
+
     protected MonsterBaseState.MonsterState currentState; //몬스터 상태를 복사
     public MonsterContext monsterContext{ get; protected set; } //몬스터의 기본적인 정보가 담긴 데이터 컨테이너
-    #endregion
+
     public MonsterStateMachine monsterStateMachine{ get; protected set; }
     private Dictionary<MonsterBaseState.MonsterState, MonsterBaseState.IState> _state; //몬스터의 스테이트를 키로하고 몬스터의 스테이트 인터페이스(의 enum값)를 값으로 하는 딕셔너리
 
@@ -43,6 +43,10 @@ public class MonsterStateMachine : MonoBehaviour
         _state[nextState].Enter(); //딕셔너리 키에 따라 다음 스테이트 인터페이스의 Enter를 호출
     }
 
+
+
 }
+
+
 
 

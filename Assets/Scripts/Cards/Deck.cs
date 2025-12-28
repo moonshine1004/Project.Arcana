@@ -4,13 +4,23 @@ using static UnityEngine.Rendering.GPUSort;
 
 public class Deck : MonoBehaviour
 {
-    [SerializeField]private DeckSavingModule _saveDeck;
-
+    private static Deck _instance;
+    public static Deck Instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                _instance = new Deck();
+            }    
+            return _instance;
+        }
+    }
     
     //플레이어가 구성한 카드 덱 클래스 입니다
     //카드 덱 리스트
-    [SerializeField]private List<CardData> _cardDeck =new List<CardData>(12);
-    public List<CardData> CardDeck
+    [SerializeField]private List<CardModel> _cardDeck = new List<CardModel>(12);
+    public List<CardModel> CardDeck
     {
         get{return _cardDeck;}
     }

@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CallingCloudCode
   _saveDeck: {fileID: 785999660}
-  _usingCardList: {fileID: 1393031577}
 --- !u!114 &53596616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 1276253321}
-  _usingCardList: {fileID: 1393031577}
   _cardViewPrefab:
   - {fileID: 981333070}
   - {fileID: 1436643595}
@@ -646,8 +644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7c4e63937e9471a9455410da4bd364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpContentPresenter
-  _popUpContentView: {fileID: 374063790}
-  _popUpContentModel: {fileID: 0}
 --- !u!114 &374063790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2644bc10b0b4843568a6b9cddb8af44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpContentView
-  _content: {fileID: 374063788}
+  _contentTransform: {fileID: 0}
   _cardView: {fileID: 6935796601457279823, guid: 8b03fa0cfa0e55a468daa9c4f5cb5950, type: 3}
 --- !u!114 &374063791
 MonoBehaviour:
@@ -797,7 +793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 466908739}
-  - component: {fileID: 466908741}
+  - component: {fileID: 466908740}
   m_Layer: 5
   m_Name: PopUps
   m_TagString: Untagged
@@ -821,7 +817,7 @@ Transform:
   - {fileID: 55336364}
   m_Father: {fileID: 945660012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &466908741
+--- !u!114 &466908740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -830,10 +826,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 466908738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8186f684f2ba4eb8bff6803969dd176, type: 3}
+  m_Script: {fileID: 11500000, guid: 2644bc10b0b4843568a6b9cddb8af44a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PopUpController
-  _popUpView: {fileID: 466908738}
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpContentView
+  _contentTransform: {fileID: 55336364}
+  _cardView: {fileID: 6935796601457279823, guid: 8b03fa0cfa0e55a468daa9c4f5cb5950, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,19 +1588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230381c1b96ecb847aa63be5d719322a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveDeck
-  _cardDeck:
-  - {fileID: 11400000, guid: a9c7466143eaa674c996baf06d88104e, type: 2}
-  - {fileID: 11400000, guid: 2b2a2ca3736994b43b77a8eba9157e63, type: 2}
-  - {fileID: 11400000, guid: cacfd146ec5beea418680dc214d71f14, type: 2}
-  - {fileID: 11400000, guid: 95d66fef89c0b8c4b971053ec6fb758d, type: 2}
-  - {fileID: 11400000, guid: 20a415aec84933d44bf154d60ea796f2, type: 2}
-  - {fileID: 11400000, guid: ace38892a0936424a8a5983557e06655, type: 2}
-  - {fileID: 11400000, guid: ea48878eab394a441934091ed9821786, type: 2}
-  - {fileID: 11400000, guid: 5072ef706a6a78a4ab4294e1191e2d22, type: 2}
-  - {fileID: 11400000, guid: b1b3f847f121e5046a4e89cde4c6dfd9, type: 2}
-  - {fileID: 11400000, guid: 9be8273797af1a8498354db00895e529, type: 2}
-  - {fileID: 11400000, guid: 18ccdab9a454033438c9ded777766288, type: 2}
-  - {fileID: 11400000, guid: 2402ea993f54e464889cec6d4e9691e2, type: 2}
   _deck: {fileID: 1393031575}
 --- !u!1 &787747689
 GameObject:
@@ -5992,7 +5976,7 @@ MonoBehaviour:
     m_ActionName: 'PlayerContol/OnSkillInput[/Keyboard/q,/Keyboard/w,/Keyboard/e,/Keyboard/r,/Keyboard/t]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 466908741}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PopUpController, Assembly-CSharp
         m_MethodName: PopUpKeyInput
         m_Mode: 0
@@ -6819,7 +6803,19 @@ MonoBehaviour:
     m_ActionId: 414f7c17-6a60-40ce-91c6-bed57951e9fb
     m_ActionName: 'PlayerContol/Attack[/Keyboard/q,/Keyboard/w,/Keyboard/e,/Keyboard/r,/Keyboard/t]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 466908740}
+        m_TargetAssemblyTypeName: PopUpContentView, Assembly-CSharp
+        m_MethodName: PopUpKeyInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ffeca862-889d-425b-9344-89a1a4bcd33c
     m_ActionName: 'PlayerContol/UI[/Keyboard/m]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -6841,7 +6837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 30
   UsingSkillSlot: 0
-  _usingCardList: {fileID: 1393031577}
   _cardUIRenderer: {fileID: 324319603}
   _projectileLauncher: {fileID: 1276253326}
 --- !u!4 &1276253322 stripped
@@ -6916,14 +6911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae0c5614513ba04395fb4e4916d2818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UsingCardList: {fileID: 1393031577}
   _cardPooling: {fileID: 1555403937}
-  _cardData:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _playerController: {fileID: 1276253321}
   _cardUIRenderer: {fileID: 324319603}
 --- !u!114 &1276253326
@@ -6938,7 +6926,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cd0e9091722b74ca74a6b02b477ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _usingCardList: {fileID: 1393031577}
   _playerController: {fileID: 1276253321}
   _projectile: {fileID: 4509570418347196274, guid: b103e4836b8e9d144aa64069797d5b6b, type: 3}
   speed: 30
@@ -7056,8 +7043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7c4e63937e9471a9455410da4bd364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpContentPresenter
-  _popUpContentView: {fileID: 1278994797}
-  _popUpContentModel: {fileID: 0}
 --- !u!114 &1278994797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7070,7 +7055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2644bc10b0b4843568a6b9cddb8af44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopUpContentView
-  _content: {fileID: 1278994795}
+  _contentTransform: {fileID: 0}
   _cardView: {fileID: 6935796601457279823, guid: 8b03fa0cfa0e55a468daa9c4f5cb5950, type: 3}
 --- !u!114 &1278994798
 MonoBehaviour:
@@ -10232,20 +10217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be752f9f6149baf4b87d1b46a7c3753a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _saveDeck: {fileID: 0}
-  _cardDeck:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1393031576
 Transform:
   m_ObjectHideFlags: 0

@@ -4,25 +4,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class UsingCardList : MonoBehaviour
+public class UsingCardList
 {
-    [SerializeField] private List<CardData> undealtDeck = new List<CardData>(); //드로우 전 카드 리스트
-    [SerializeField] private List<CardData> discardPile = new List<CardData>(); //사용된 카드 리스트
-    public CardData[] hand = new CardData[5]; //qwert키에 할당되는 카드 배열
+    [SerializeField] private List<CardModel> undealtDeck = new List<CardModel>(); //드로우 전 카드 리스트
+    [SerializeField] private List<CardModel> discardPile = new List<CardModel>(); //사용된 카드 리스트
+    public CardModel[] hand = new CardModel[5]; //qwert키에 할당되는 카드 배열
     private const int initialHandSize = 5; //드로우 카드 수
     [SerializeField] private Deck _deck; //카드 덱 위임
 
-    #region 프로퍼티
+
     public Deck Deck
     {
         get => _deck;
     }
-    #endregion
+
 
     
     public async Task Init(Deck deck)
     {
-        List<CardData> shuffled = new List<CardData>(deck.CardDeck); //카드 덱 위임
+        List<CardModel> shuffled = new List<CardModel>(deck.CardDeck);
         //카드 덱을 셔플
         Shuffle(shuffled);
         //드로우 전 카드를 드로우 카드 수 만큼 hand로 이동
@@ -72,7 +72,7 @@ public class UsingCardList : MonoBehaviour
         }
     }
     //드로우 카드 리스트를 채우는 메서드
-    public void AddCardToHand(List<CardData> list)
+    public void AddCardToHand(List<CardModel> list)
     {
         for (int i = 0; i < hand.Length; i++)
         {

@@ -7,9 +7,9 @@ using System.Collections.Generic;
 public static class CardParser
 {
     //CSV파일을 받아 카드 타입 객체의 리스트를 반환하는 스크립트
-    public static List<CardData> ParseCSVToCards(TextAsset csvFile)
+    public static List<CardScriptableObject> ParseCSVToCards(TextAsset csvFile)
     {
-        var result = new List<CardData>(); //카드 리스트 생성
+        var result = new List<CardScriptableObject>(); //카드 리스트 생성
         var rows = ParseCSV(csvFile.text); //CSV파일의 텍스트를 ParseCSV메서드에 넣어 문자열 배열의 리스트로 만들어 대입-->인덱스가 바뀔 때마다 행이 바뀜
         //데이터가 적어 의미 없는 경우 종료
         if (rows.Count < 4)
@@ -31,7 +31,7 @@ public static class CardParser
                 continue;
             }
             //카드 스크립터블 오브젝트(인스턴스)를 메모리에 생성
-            CardData card = ScriptableObject.CreateInstance<CardData>();
+            CardScriptableObject card = ScriptableObject.CreateInstance<CardScriptableObject>();
             //각 열을 파싱하는 내부 루프
             //이거 왜 &&?
             for (int j = 0; j < headers.Length && j < row.Length; j++)

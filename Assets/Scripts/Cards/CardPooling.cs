@@ -43,7 +43,6 @@ public class CardPooling : MonoBehaviour
     //카드를 풀에 반환(비활성화)
     private void OnReturnedToPool(CardView card)
     {
-        card.ResetView();
         card.gameObject.SetActive(false);
     }
     //풀의 크기를 초과했을 때 몬스터를 삭제
@@ -53,10 +52,9 @@ public class CardPooling : MonoBehaviour
     }
 
     // 카드 꺼내는 메서드
-    public CardView GetCardView(CardData data)
+    public CardView GetCardView(CardScriptableObject data)
     {
         var card = _cardPool.Get();
-        card.Initialize(data);
         return card;
     }
 

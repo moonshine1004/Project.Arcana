@@ -20,15 +20,16 @@ public class CardUIRenderer : MonoBehaviour
 
     public void CardRender()
     {
-        _cardViewPrefab[0].Initialize(_usingCardList.hand[0]);
-        _cardViewPrefab[1].Initialize(_usingCardList.hand[1]);
-        _cardViewPrefab[2].Initialize(_usingCardList.hand[2]);
-        _cardViewPrefab[3].Initialize(_usingCardList.hand[3]);
-        _cardViewPrefab[4].Initialize(_usingCardList.hand[4]);
-        for(int i=0; i<5; i++)
-        {
-            _cardViewPrefab[i].Initialize(_usingCardList.hand[i]);
-        }
+        // _cardViewPrefab[0].SetCartView()
+        // Initialize(_usingCardList.hand[0]);
+        // _cardViewPrefab[1].Initialize(_usingCardList.hand[1]);
+        // _cardViewPrefab[2].Initialize(_usingCardList.hand[2]);
+        // _cardViewPrefab[3].Initialize(_usingCardList.hand[3]);
+        // _cardViewPrefab[4].Initialize(_usingCardList.hand[4]);
+        // for(int i=0; i<5; i++)
+        // {
+        //     _cardViewPrefab[i].Initialize(_usingCardList.hand[i]);
+        // }
 
         _cardManager.ImageRenderer(0, _usingCardList.hand[0].cardID);
         _cardManager.ImageRenderer(1, _usingCardList.hand[1].cardID);

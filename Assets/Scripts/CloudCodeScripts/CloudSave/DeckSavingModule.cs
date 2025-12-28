@@ -9,7 +9,7 @@ using UnityEngine;
 public class DeckSavingModule : MonoBehaviour
 {
     //저장할 덱 구성
-    [SerializeField] private List<CardData> _cardDeck;
+    [SerializeField] private List<CardModel> _cardDeck;
     [SerializeField] private Deck _deck;
 
     public Deck Deck
@@ -35,14 +35,15 @@ public class DeckSavingModule : MonoBehaviour
         
     }
 
-    public async Task initCardData(List<CardData> cardDatas)
+    public async Task initCardData(List<CardModel> cardDatas)
     {   
         for(int i = 0; i<12; i++)
         {
             var cardData = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> {{i.ToString()}});
             cardData.TryGetValue($"{i}", out var card);
             var jsonFile = card.Value.GetAs<string>();
-            var scriptableObj = ScriptableObject.CreateInstance<CardData>();
+            var scriptableObj = new CardModel();
+            //ScriptableObject.CreateInstance<CardScriptableObject>();
             JsonUtility.FromJsonOverwrite(jsonFile, scriptableObj);
             cardDatas[i] = scriptableObj;
             

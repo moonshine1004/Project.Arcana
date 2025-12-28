@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
@@ -11,23 +12,11 @@ public class CardView : MonoBehaviour
     [SerializeField] private TMP_Text _damageText;
     [SerializeField] public Image _image;
     [SerializeField] private CardManager _cardManager;
-    private CardData _cardData;
 
-
-    public async void Initialize(CardData card)
+    public void SetCartView(CardModel model)
     {
-        _cardData = card;
-        _costText.text = card.cost.ToString();
-        _damageText.text = card.damage.ToString();
-
-    }
-    
-
-    public void ResetView()
-    {
-        _cardData = null;
-        _costText.text = "";
-        _damageText.text = "";
+        _costText.text = model.cost.ToString();
+        _damageText.text = model.damage.ToString();
     }
 
     private Color GetColorByElement(Enum.Element element)
@@ -42,4 +31,6 @@ public class CardView : MonoBehaviour
             default: return Color.gray;
         }
     }
+
+    
 }

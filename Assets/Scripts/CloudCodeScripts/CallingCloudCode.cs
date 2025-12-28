@@ -75,6 +75,7 @@ public class CallingCloudCode : Singleton<CallingCloudCode>, GameManager.IGameMa
         Debug.Log("카드 불러오기 끝");
 
         await _usingCardList.Init(_usingCardList.Deck);
+        CardPresenter.Instance.InitializeCards(_usingCardList.Deck);
         Debug.Log("카드 이전 완료");
     }
 
