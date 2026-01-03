@@ -9,7 +9,7 @@ public class ProjectileLauncher : MonoBehaviour
     //투사체 발사에 관한 스크립트입니다.
 
     [SerializeField] private UsingCardList _usingCardList;
-    [SerializeField] private PlayerController _playerController;
+    [SerializeField] private PlayerControllerTest _playerController;
     
     [Header("풀링 시스템")]
     [SerializeField] GameObject _projectile;

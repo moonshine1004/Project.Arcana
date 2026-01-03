@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// 조작기기를 이용한 플레이어 조작에 관한 메서드
 /// </summary>
-public class PlayerController : MonoBehaviour
+public class PlayerControllerTest : MonoBehaviour
 {
 
     private Rigidbody2D _rb;

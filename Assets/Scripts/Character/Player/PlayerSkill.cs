@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerSkill : MonoBehaviour
 {
-    private PlayerController _controller;
+    private PlayerControllerTest _controller;
 
     private void Start()
     {

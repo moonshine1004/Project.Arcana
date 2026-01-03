@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 // Single ton
 public class CardPresenter
@@ -16,6 +17,9 @@ public class CardPresenter
             return _instance;
         }
     }
+
+
+
     private List<CardModel> _deck = new List<CardModel>(12);
     public List<CardModel> CardDeck
     {
@@ -59,3 +63,5 @@ public class CardPresenter
 
 
 }
+
+

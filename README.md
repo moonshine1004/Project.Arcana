@@ -8,6 +8,7 @@
 - **개발 도구**: C#
 - **버전 관리**: Git, GitHub
 - **데이터 관리**: Unity ScriptableObject, CSV, Excel
+- **아키텍쳐 패턴**: MVVM
 - **개발 인원**: 개인 프로젝트
 
 ## 구현상세 

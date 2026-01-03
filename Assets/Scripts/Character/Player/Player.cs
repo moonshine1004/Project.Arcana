@@ -5,14 +5,14 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// player 동작의 전반을 다루는 클래스
 /// </summary>
-[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(PlayerControllerTest))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private UsingCardList _UsingCardList;
     [SerializeField] private CardPooling _cardPooling; //카드 풀 위임
     [SerializeField] private List<CardModel> _cardData; //카드 데이터(스크립터블 오브젝트) 리스트
     private CardView _currentCard; //카드 프리팹
-    [SerializeField] private PlayerController _playerController; //현재 사용 중인 카드 인덱스를 위임 받아옴
+    [SerializeField] private PlayerControllerTest _playerController; //현재 사용 중인 카드 인덱스를 위임 받아옴
     [SerializeField] private CardUIRenderer _cardUIRenderer;
 
 

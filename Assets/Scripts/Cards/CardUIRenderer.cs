@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CardUIRenderer : MonoBehaviour
 {
-    [SerializeField] private PlayerController _playerController;
+    [SerializeField] private PlayerControllerTest _playerController;
     [SerializeField] private UsingCardList _usingCardList;
 
     [SerializeField] private CardView[] _cardViewPrefab;
