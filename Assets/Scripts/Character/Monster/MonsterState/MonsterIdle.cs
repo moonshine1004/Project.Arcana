@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Unity.Services.CloudCode.GeneratedBindings;
 
-public class MonsterIdle : MonsterStateMachine, MonsterBaseState.IState
+public class MonsterIdle : MonsterStateMachine, MonsterBaseState.IMonsterState
 {
 
     //몬스터의 idle 상태를 정의한 클래스입니다.

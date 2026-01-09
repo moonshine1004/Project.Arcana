@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MonsterAttackState : MonsterStateMachine, MonsterBaseState.IState
+public class MonsterAttackState : MonsterStateMachine, MonsterBaseState.IMonsterState
 {
     public MonsterBaseState.MonsterState StateType => MonsterBaseState.MonsterState.Attack;
 

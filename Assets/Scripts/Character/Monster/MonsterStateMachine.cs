@@ -10,7 +10,7 @@ public class MonsterStateMachine : MonoBehaviour
     public MonsterContext monsterContext{ get; protected set; } //몬스터의 기본적인 정보가 담긴 데이터 컨테이너
 
     public MonsterStateMachine monsterStateMachine{ get; protected set; }
-    private Dictionary<MonsterBaseState.MonsterState, MonsterBaseState.IState> _state; //몬스터의 스테이트를 키로하고 몬스터의 스테이트 인터페이스(의 enum값)를 값으로 하는 딕셔너리
+    private Dictionary<MonsterBaseState.MonsterState, MonsterBaseState.IMonsterState> _state; //몬스터의 스테이트를 키로하고 몬스터의 스테이트 인터페이스(의 enum값)를 값으로 하는 딕셔너리
 
 
     private void Start()
@@ -19,8 +19,8 @@ public class MonsterStateMachine : MonoBehaviour
     }
     private void Awake()
     {
-        var found = GetComponents<MonoBehaviour>().OfType<MonsterBaseState.IState>(); //오브젝트의 MonsterStateMachine 컴포넌트 중 MonsterBaseState.IState 인터페이스를 갖고 있는 컴포넌트만 IEnumerable형 변수 found에 넣음
-        _state = new Dictionary<MonsterBaseState.MonsterState, MonsterBaseState.IState>(); //새 딕서너리를 만듦
+        var found = GetComponents<MonoBehaviour>().OfType<MonsterBaseState.IMonsterState>(); //오브젝트의 MonsterStateMachine 컴포넌트 중 MonsterBaseState.IState 인터페이스를 갖고 있는 컴포넌트만 IEnumerable형 변수 found에 넣음
+        _state = new Dictionary<MonsterBaseState.MonsterState, MonsterBaseState.IMonsterState>(); //새 딕서너리를 만듦
 
         monsterContext = new MonsterContext //몬스터의 데이터 컨테이너 복사
         {

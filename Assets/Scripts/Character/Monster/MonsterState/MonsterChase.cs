@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MonsterChase : MonsterStateMachine, MonsterBaseState.IState
+public class MonsterChase : MonsterStateMachine, MonsterBaseState.IMonsterState
 {
     //몬스터의 chase 상태를 정의한 클래스입니다.
     #region 필드 변수

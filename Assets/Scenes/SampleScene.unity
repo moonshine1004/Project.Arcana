@@ -5915,7 +5915,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 945660012}
-  - component: {fileID: 945660014}
   - component: {fileID: 945660013}
   m_Layer: 0
   m_Name: UIs
@@ -5995,18 +5994,6 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerContol
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &945660014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945660011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b0e116f0ab34447918c008e50f09ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIControlManger
 --- !u!1 &947520715
 GameObject:
   m_ObjectHideFlags: 0
@@ -10245,15 +10232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5590f7e35cdaa9a489130da5fb76042e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  undealtDeck: []
-  discardPile: []
-  hand:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _deck: {fileID: 1393031575}
 --- !u!114 &1393031578
 MonoBehaviour:
   m_ObjectHideFlags: 0

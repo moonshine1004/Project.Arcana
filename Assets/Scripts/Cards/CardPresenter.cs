@@ -25,8 +25,8 @@ public class CardPresenter
     {
         get{return _deck;}
     }
-    private List<CardModel> undealtDeck = new List<CardModel>(); //드로우 전 카드 리스트
-    private List<CardModel> discardPile = new List<CardModel>(); //사용된 카드 리스트
+    private List<CardModel> _undealtDeck = new List<CardModel>(); //드로우 전 카드 리스트
+    private List<CardModel> _discardPile = new List<CardModel>(); //사용된 카드 리스트
     public CardModel[] hand = new CardModel[5]; //qwert키에 할당되는 카드 배열
 
 

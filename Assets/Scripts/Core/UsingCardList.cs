@@ -64,10 +64,8 @@ public class UsingCardList
     {
         for (int i = 0; i < list.Count; i++)
         {
-            //i부터 리스트의 마지막 인덱스 중 랜덤으로 선택해서 j에 대입
             int j = Random.Range(i, list.Count);
-            //i번째와 랜덤하게 선택된 j번째 요소를 교환
-            //스왑하는 스크립트
+
             (list[i], list[j]) = (list[j], list[i]);
         }
     }

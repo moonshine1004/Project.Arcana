@@ -3,7 +3,7 @@ using UnityEngine;
 public class MonsterBaseState : MonoBehaviour
 {
     //캐릭터의 
-    public interface IState
+    public interface IMonsterState
     {
         public void Enter();
         public void Update();
