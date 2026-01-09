@@ -46,7 +46,7 @@ flowchart LR
 
 #### 3. 몬스터 인공지능
 - **FSM**: FSM은 객체의 상태를 추상화하여 나누고 전이함수를 통해 상태 변화를 제어하는, 가장 기초적인 게임 인공지능 제작 기법입니다.
-  - 구현: `MonsterBaseState`를 베이스로 하여, 몬스터의 상태를 `MonsterIdleState`, `MonsterChaseState`, `MonsterAttackState`, `MonsterBackState`로 나누어 `MonsterStateMachine`을 통해 전이함수를 구현하였습니다.
+  - 구현: 몬스터의 상태를 `MonsterIdleState`, `MonsterChaseState`, `MonsterAttackState`, `MonsterBackState`로 나누어 `MonsterStateMachine`을 통해 전이함수를 구현하였습니다.
 ```mermaid
 classDiagram
     class MonsterStateMachine {
@@ -82,6 +82,7 @@ classDiagram
 #### 4. 기타
 - 플레이어 이동 구현: 플레이어의 이동은 Unity6부터 기본으로 탑재된 InputAction Package를 사용하여 구현하였습니다. InputAction Package는 입력을 게임 로직과 분리하고 이를 액션 단위로 추상화하여 조작기기 변경 시 바인딩을 코드 수정없이, 입력 발생 시 콜백을 통해 이동 로직이 실행되도록 구현하였습니다.
 - CineMachine?
+- 싱글톤 게임 매니저
 
 
 ## 기술적 포인트 & 문제해결
