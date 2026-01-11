@@ -88,6 +88,7 @@
   <Project Path="Unity.2D.Tilemap.Extras.Editor.csproj" />
   <Project Path="Unity.Services.Deployment.csproj" />
   <Project Path="Unity.2D.Sprite.Editor.csproj" />
+  <Project Path="Unity.Cursor.Editor.csproj" />
   <Project Path="Unity.AppUI.Navigation.csproj" />
   <Project Path="Unity.2D.Enhancers.Editor.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />

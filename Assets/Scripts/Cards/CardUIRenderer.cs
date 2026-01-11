@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CardUIRenderer : MonoBehaviour
 {
-    [SerializeField] private PlayerControllerTest _playerController;
-    [SerializeField] private UsingCardList _usingCardList;
+    private ICardPresenter _cardPresenter;
 
     [SerializeField] private CardView[] _cardViewPrefab;
     [SerializeField] private CardManager _cardManager;
@@ -30,12 +29,12 @@ public class CardUIRenderer : MonoBehaviour
         // {
         //     _cardViewPrefab[i].Initialize(_usingCardList.hand[i]);
         // }
-
-        _cardManager.ImageRenderer(0, _usingCardList.hand[0].cardID);
-        _cardManager.ImageRenderer(1, _usingCardList.hand[1].cardID);
-        _cardManager.ImageRenderer(2, _usingCardList.hand[2].cardID);
-        _cardManager.ImageRenderer(3, _usingCardList.hand[3].cardID);
-        _cardManager.ImageRenderer(4, _usingCardList.hand[4].cardID);
+        var cards = _cardPresenter.GetHandCardIDs();
+        for(int i = 0; i < cards.Length; i++)
+        {
+            _cardManager.ImageRenderer(i, cards[i]);
+        }
+            
     }
 
     public void cardAnimation(int i)

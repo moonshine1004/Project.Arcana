@@ -6,6 +6,9 @@ using NUnit.Framework.Internal;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+namespace study
+{
+    
 
 public enum MonsterType
 {
@@ -367,6 +370,7 @@ public class PlayerViewModel
     }
 }
 
+}
 
 
 

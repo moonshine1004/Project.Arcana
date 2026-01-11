@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 public class CallingCloudCode : Singleton<CallingCloudCode>, GameManager.IGameManger
 {
     #region 관리할 하위 매니저들
-    [SerializeField] private DeckSavingModule _saveDeck;    //
-    [SerializeField] private UsingCardList _usingCardList;
+    [SerializeField] private DeckSavingModule _saveDeck;
     #endregion
     
     #region 필드
@@ -27,6 +26,7 @@ public class CallingCloudCode : Singleton<CallingCloudCode>, GameManager.IGameMa
         }
     }
     #endregion
+    [SerializeField] private ICardPresenter _cardPresenter;
     
     private async void Start()
     {   
@@ -69,13 +69,12 @@ public class CallingCloudCode : Singleton<CallingCloudCode>, GameManager.IGameMa
     public async Task IOnStartAsync()
     {
         await CloudeCodeAuthentication();
-        UseUGS();
 
-        await _saveDeck.initCardData(_saveDeck.Deck.CardDeck);
+        await _saveDeck.InitCardData(_cardPresenter.GetCardDeck());
         Debug.Log("카드 불러오기 끝");
 
-        await _usingCardList.Init(_usingCardList.Deck);
-        CardPresenter.Instance.InitializeCards(_usingCardList.Deck);
+        //await _cardPresenter.Init(_cardPresenter.GetCardDeck());
+        //CardPresenter.Instance.InitializeCards(_usingCardList.Deck);
         Debug.Log("카드 이전 완료");
     }
 

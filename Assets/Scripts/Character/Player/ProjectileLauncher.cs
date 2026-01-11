@@ -8,8 +8,8 @@ public class ProjectileLauncher : MonoBehaviour
 {
     //투사체 발사에 관한 스크립트입니다.
 
-    [SerializeField] private UsingCardList _usingCardList;
-    [SerializeField] private PlayerControllerTest _playerController;
+    [SerializeField] private ICardPresenter _cardPresenter;
+    [SerializeField] private PlayerView _playerController;
     
     [Header("풀링 시스템")]
     [SerializeField] GameObject _projectile;
@@ -64,11 +64,11 @@ public class ProjectileLauncher : MonoBehaviour
     }
     
     //투사체 발사 스크립트
-    public void Shoot()
+    public void Shoot(int index)
     {
         //오브젝트 풀에서 투사체를 꺼내옴
         GameObject projectile = pool.Get();
-        RenderProjectileSprite(projectile, _usingCardList.hand[_playerController.UsingSkillSlot].cardID);
+        RenderProjectileSprite(projectile, _cardPresenter.GetHandCardIDs()[index]);
         _projectile.GetComponent<Damageable>().owner = projectileOwner;
 
 
@@ -83,7 +83,7 @@ public class ProjectileLauncher : MonoBehaviour
         //투사체 시작 위치 초기화
         projectile.transform.position = startPos;
         //투사체에서 Damageable 컴포넌트를 가져와 데미지 설정
-        projectile.GetComponent<Damageable>().damage = _usingCardList.GetDamage(_playerController.UsingSkillSlot);
+        projectile.GetComponent<Damageable>().damage = _cardPresenter.GetHandCardIDs()[index];
         //쿼터니언을 통해 투사체 스프라이트 방향 지정
         projectile.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
         projectile.SetActive(true);

@@ -1,11 +1,13 @@
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
-// ReSharper disable All
 
-public class CardView : MonoBehaviour
+public interface ICardView
+{
+    
+}
+
+public class CardView : MonoBehaviour, ICardView
 {
     //카드를 UI상에 표시하는 스크립트
     [SerializeField] private TMP_Text _costText;

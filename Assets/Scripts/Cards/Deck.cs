@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.Rendering.GPUSort;
 
-public class Deck : MonoBehaviour
+public class Deck
 {
     private static Deck _instance;
     public static Deck Instance
@@ -23,17 +22,6 @@ public class Deck : MonoBehaviour
     public List<CardModel> CardDeck
     {
         get{return _cardDeck;}
-    }
-
-
-    public async void Start()
-    {
-
-    }
-
-    public void Update()
-    {
-        
     }
 
 }

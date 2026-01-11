@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerSkill : MonoBehaviour
 {
-    private PlayerControllerTest _controller;
+    private PlayerView _controller;
 
     private void Start()
     {
@@ -11,7 +11,7 @@ public class PlayerSkill : MonoBehaviour
 
     private void Update()
     {
-        int nowSkillIndex = _controller.UsingSkillSlot;
+        //int nowSkillIndex = _controller.index;
     }
 
     private void SkillIndexToSkill(int skillIndex)

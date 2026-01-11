@@ -586,7 +586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2cc6cc6486b3e44bb45e47648d0b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerController: {fileID: 1276253321}
   _cardViewPrefab:
   - {fileID: 981333070}
   - {fileID: 1436643595}
@@ -1488,9 +1487,6 @@ PrefabInstance:
       addedObject: {fileID: 1276253318}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4bd0f04d4d5d7a74285047a62b96e713, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1276253325}
-    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4bd0f04d4d5d7a74285047a62b96e713, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1276253321}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4bd0f04d4d5d7a74285047a62b96e713, type: 3}
       insertIndex: -1
@@ -1588,7 +1584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230381c1b96ecb847aa63be5d719322a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveDeck
-  _deck: {fileID: 1393031575}
 --- !u!1 &787747689
 GameObject:
   m_ObjectHideFlags: 0
@@ -6823,7 +6818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 30
-  UsingSkillSlot: 0
   _cardUIRenderer: {fileID: 324319603}
   _projectileLauncher: {fileID: 1276253326}
 --- !u!4 &1276253322 stripped
@@ -6886,21 +6880,6 @@ MonoBehaviour:
   _maxHealth: 1000
   _health: 1000
   healthSlider: {fileID: 421995115}
---- !u!114 &1276253325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276253317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ae0c5614513ba04395fb4e4916d2818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cardPooling: {fileID: 1555403937}
-  _playerController: {fileID: 1276253321}
-  _cardUIRenderer: {fileID: 324319603}
 --- !u!114 &1276253326
 MonoBehaviour:
   m_ObjectHideFlags: 0

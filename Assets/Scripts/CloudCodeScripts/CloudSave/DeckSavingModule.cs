@@ -31,11 +31,10 @@ public class DeckSavingModule : MonoBehaviour
 
         //SaveAsync 메서드: 딕셔너리의 키와 값을 서버에 저장
         await CloudSaveService.Instance.Data.Player.SaveAsync(cardDataDiction);
-        Debug.Log("ok");
         
     }
 
-    public async Task initCardData(List<CardModel> cardDatas)
+    public async Task InitCardData(List<CardModel> cardDatas)
     {   
         for(int i = 0; i<12; i++)
         {
