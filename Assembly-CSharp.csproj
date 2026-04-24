@@ -42,12 +42,12 @@
     <UnityVersion>6000.2.12f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/moonshine/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.0/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/moonshine/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
-    <Analyzer Include="/Users/moonshine/Desktop/MyProjects/MyProject/Library/PackageCache/com.unity.ai.inference@587873fd5e1b/Runtime/Core/SourceGenerator/SourceGenerators.dll" />
-    <Analyzer Include="/Users/moonshine/Desktop/MyProjects/MyProject/Library/PackageCache/com.unity.dt.app-ui@7b87c8225c06/Runtime/SourceGenerators/netstandard2.0/EnumToLowerCase.dll" />
+    <Analyzer Include="/Users/moonshine/Desktop/MyProjects/Project.Arcana/Library/PackageCache/com.unity.ai.inference@587873fd5e1b/Runtime/Core/SourceGenerator/SourceGenerators.dll" />
+    <Analyzer Include="/Users/moonshine/Desktop/MyProjects/Project.Arcana/Library/PackageCache/com.unity.dt.app-ui@7b87c8225c06/Runtime/SourceGenerators/netstandard2.0/EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Scripts/CharacterAppearance.cs" />
@@ -663,6 +663,26 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb/Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/Hub/Editor/6000.2.12f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/Hub/Editor/6000.2.12f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Apple.Extensions.Common">
+      <HintPath>/Applications/Unity/Hub/Editor/6000.2.12f1/PlaybackEngines/iOSSupport/UnityEditor.Apple.Extensions.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>/Applications/Unity/Hub/Editor/6000.2.12f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>/Applications/Unity/Hub/Editor/6000.2.12f1/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
