@@ -2,5 +2,6 @@
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="FangAutoTile.csproj" />
   <Project Path="FangAutoTile.Editor.csproj" />
+  <Project Path="Arcana.Bootstrap.csproj" />
   <Project Path="Unity.Services.CloudCode.GeneratedBindings.csproj" />
 </Solution>

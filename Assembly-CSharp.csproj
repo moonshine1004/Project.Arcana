@@ -89,7 +89,6 @@
     <Compile Include="Assets/Scripts/Features/Cards/CardPooling.cs" />
     <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterState/MonsterAttackState.cs" />
     <Compile Include="Assets/Scripts/Features/Cards/CardManager.cs" />
-    <Compile Include="Assets/Scripts/Bootstrap/ProjectLifetimeScope.cs" />
     <Compile Include="Assets/Samples/Authentication/3.5.1/UI Example/FacebookLoginUIExample.cs" />
     <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterMovement.cs" />
     <Compile Include="Assets/Scripts/Legacy/Path Finding/NavigationTile.cs" />
@@ -1282,12 +1281,16 @@
       <HintPath>Library/ScriptAssemblies/Unity.Services.Authentication.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.2D.Aseprite.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.2D.Aseprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    <Reference Include="Unity.AI.Assistant.Bridge.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.AI.Assistant.Bridge.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.InferenceEngine.Editor">
@@ -1296,10 +1299,6 @@
     </Reference>
     <Reference Include="Unity.Services.Authentication.Editor.Shared">
       <HintPath>Library/ScriptAssemblies/Unity.Services.Authentication.Editor.Shared.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Assistant.Bridge.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.AI.Assistant.Bridge.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
@@ -1606,6 +1605,7 @@
   <ItemGroup>
     <ProjectReference Include="Unity.Services.CloudCode.GeneratedBindings.csproj" />
     <ProjectReference Include="FangAutoTile.csproj" />
+    <ProjectReference Include="Arcana.Bootstrap.csproj" />
     <ProjectReference Include="FangAutoTile.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />

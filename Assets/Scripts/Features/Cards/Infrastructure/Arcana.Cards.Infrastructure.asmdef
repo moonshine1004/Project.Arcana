@@ -1,0 +1,17 @@
+{
+    "name": "Arcana.Cards.Infrastructure",
+    "rootNamespace": "Arcana.Cards.Infrastructure",
+    "references": [
+        "GUID:6d880766b13434fec8bd6a1d77960717",
+        "GUID:36b14cfa0144c42a8a2f1ef98cfa1277"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
