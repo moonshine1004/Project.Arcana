@@ -42,7 +42,7 @@
     <UnityVersion>6000.2.12f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/moonshine/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/moonshine/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.3.1/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.12f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
@@ -50,61 +50,62 @@
     <Analyzer Include="/Users/moonshine/Desktop/MyProjects/Project.Arcana/Library/PackageCache/com.unity.dt.app-ui@7b87c8225c06/Runtime/SourceGenerators/netstandard2.0/EnumToLowerCase.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Features/Cards/CardData.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Scripts/CharacterAppearance.cs" />
-    <Compile Include="Assets/Scripts/Core/Enum/Enum.cs" />
-    <Compile Include="Assets/Scripts/Cards/CardPaser/CardCreater.cs" />
-    <Compile Include="Assets/Scripts/CloudCodeScripts/CloudSaveTest.cs" />
-    <Compile Include="Assets/Scripts/Manager/GameManager.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterState/MonsterChase.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterState/MonsterIdle.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterContext.cs" />
-    <Compile Include="Assets/Scripts/Character/Player/DamageableForProjectile.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterPooling.cs" />
+    <Compile Include="Assets/Scripts/Legacy/UI/PopUp/PopUpContentView.cs" />
+    <Compile Include="Assets/Scripts/Features/Item/CardTest.cs" />
+    <Compile Include="Assets/Scripts/Features/Cards/Deck.cs" />
+    <Compile Include="Assets/Scripts/Legacy/UI/UIController.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Core/PlayerAnimatorCore.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Player/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Damageable.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/CharacterStat.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/Monster.cs" />
+    <Compile Include="Assets/Scripts/Legacy/CloudCodeScripts/CloudSaveTest.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Scripts/PlayerMovement.cs" />
-    <Compile Include="Assets/Scripts/Character/Player/ProjectileLauncher.cs" />
-    <Compile Include="Assets/Scripts/Item/CardTest.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Player/DamageableForProjectile.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Resources/Prefabs_with_behavior/chest_open_on_contact/Scripts/ChestAnimationOnContact.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Resources/Prefabs_with_behavior/block_push_on_contact/Scripts/BlockPushOnContact.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Resources/Prefabs_with_behavior/tall_grass_react_on_contact/Scripts/TallGrassAnimationOnContact.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Core/Enum/ItemEnum.cs" />
+    <Compile Include="Assets/Scripts/Legacy/UI/UIView.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Ruccho/FangAutoTile/Sample/OnMapPlayerController.cs" />
-    <Compile Include="Assets/Scripts/Cards/CardManager.cs" />
+    <Compile Include="Assets/Scripts/Features/Cards/CardPaser/CardPaser.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Player/ProjectileLauncher.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Core/Enum/Enum.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Core/Singleton.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Player/PlayerSkill.cs" />
     <Compile Include="Assets/Samples/Authentication/3.5.1/UI Example/UnityPlayerAccountsUIExample.cs" />
-    <Compile Include="Assets/Scripts/Core/ProjectileLifetime.cs" />
-    <Compile Include="Assets/Scripts/Core/UsingCardList.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterState/MonsterAttackState.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/Monster.cs" />
-    <Compile Include="Assets/Scripts/Character/Player/PlayerController.cs" />
-    <Compile Include="Assets/Scripts/Item/ItemData.cs" />
-    <Compile Include="Assets/Scripts/UI/PopUp/PopUpController.cs" />
-    <Compile Include="Assets/Scripts/Core/Singleton.cs" />
-    <Compile Include="Assets/Scripts/Core/Enum/ItemEnum.cs" />
-    <Compile Include="Assets/Scripts/Character/Player/PlayerSkill.cs" />
-    <Compile Include="Assets/Scripts/Core/MonsterAnimationCore.cs" />
-    <Compile Include="Assets/Scripts/Character/Damageable.cs" />
-    <Compile Include="Assets/Scripts/Cards/CardPooling.cs" />
-    <Compile Include="Assets/Scripts/Path Finding/TileMapGrid.cs" />
-    <Compile Include="Assets/Scripts/Character/CharacterStat.cs" />
-    <Compile Include="Assets/Scripts/Cards/CardPaser/CardPaser.cs" />
-    <Compile Include="Assets/Scripts/Cards/CardUIRenderer.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterState/MonsterChase.cs" />
+    <Compile Include="Assets/Scripts/Legacy/CloudCodeScripts/CloudSave/DeckSavingModule.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Core/UsingCardList.cs" />
+    <Compile Include="Assets/Scripts/Features/Item/ItemCreator.cs" />
+    <Compile Include="Assets/Scripts/Legacy/UI/PopUp/PopUpController.cs" />
+    <Compile Include="Assets/Scripts/Features/Cards/CardView.cs" />
+    <Compile Include="Assets/Scripts/Features/Cards/CardUIRenderer.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Core/MonsterAnimationCore.cs" />
+    <Compile Include="Assets/Scripts/Features/Cards/CardPaser/CardCreater.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterBaseState.cs" />
+    <Compile Include="Assets/Scripts/Features/Cards/CardPooling.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterState/MonsterAttackState.cs" />
+    <Compile Include="Assets/Scripts/Features/Cards/CardManager.cs" />
+    <Compile Include="Assets/Scripts/Bootstrap/ProjectLifetimeScope.cs" />
     <Compile Include="Assets/Samples/Authentication/3.5.1/UI Example/FacebookLoginUIExample.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterMovement.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Path Finding/NavigationTile.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterState/MonsterIdle.cs" />
     <Compile Include="Assets/Samples/Authentication/3.5.1/UI Example/AnonymousSignInUIExample.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterStateMachine.cs" />
-    <Compile Include="Assets/Scripts/Core/PlayerAnimatorCore.cs" />
-    <Compile Include="Assets/Scripts/UI/UIController.cs" />
-    <Compile Include="Assets/Scripts/Cards/Deck.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterContext.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Path Finding/TileMapGrid.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterPooling.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Core/ProjectileLifetime.cs" />
     <Compile Include="Assets/외부 에셋/Gif/Super_Retro_Collection/Resources/Prefabs/Crops/Scripts/SpriteSelectFrame.cs" />
-    <Compile Include="Assets/Scripts/CloudCodeScripts/CallingCloudCode.cs" />
-    <Compile Include="Assets/Scripts/CloudCodeScripts/CloudSave/DeckSavingModule.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterBaseState.cs" />
-    <Compile Include="Assets/Scripts/UI/PopUp/PopUpContentView.cs" />
-    <Compile Include="Assets/Scripts/Path Finding/NavigationTile.cs" />
-    <Compile Include="Assets/Scripts/Character/Monster/MonsterMovement.cs" />
-    <Compile Include="Assets/Scripts/UI/UIView.cs" />
-    <Compile Include="Assets/Scripts/Cards/CardData.cs" />
-    <Compile Include="Assets/Scripts/Cards/CardView.cs" />
-    <Compile Include="Assets/Scripts/Item/ItemCreator.cs" />
-    <Compile Include="Assets/Scripts/Manager/CardRenderManager.cs" />
-    <Compile Include="Assets/Scripts/Character/Player/Player.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Manager/CardRenderManager.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Player/Player.cs" />
+    <Compile Include="Assets/Scripts/Features/Character/Monster/MonsterStateMachine.cs" />
+    <Compile Include="Assets/Scripts/Features/Item/ItemData.cs" />
+    <Compile Include="Assets/Scripts/Legacy/CloudCodeScripts/CallingCloudCode.cs" />
+    <Compile Include="Assets/Scripts/Legacy/Manager/GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -1377,6 +1378,10 @@
       <HintPath>Library/ScriptAssemblies/Unity.AppUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="VContainer">
+      <HintPath>Library/ScriptAssemblies/VContainer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.2D.Sprite.AIIntegration.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.AIIntegration.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1455,6 +1460,10 @@
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VContainer.Editor">
+      <HintPath>Library/ScriptAssemblies/VContainer.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Cinemachine.Editor">
