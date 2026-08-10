@@ -1603,6 +1603,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Arcana.Cards.Domain.csproj" />
     <ProjectReference Include="Unity.Services.CloudCode.GeneratedBindings.csproj" />
     <ProjectReference Include="FangAutoTile.csproj" />
     <ProjectReference Include="Arcana.Bootstrap.csproj" />
